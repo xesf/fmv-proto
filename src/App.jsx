@@ -26,15 +26,15 @@ const Game = () => {
         const video = document.createElement("video");
 
         const run = (tick, elapsed) => {
-            /*const elapsedRewind = tick - prevTickRewind;
+            const elapsedRewind = tick - prevTickRewind;
         
             // rewind elapsed time
-            if (elapsedRewind > 100) {
+            if (elapsedRewind > 400) {
                 prevTickRewind = tick - (elapsedRewind % fps);
 
                 if (!canRewind 
                     && video.currentTime !== undefined
-                    && video.currentTime > 5) { // > 6.1) {
+                    && video.currentTime > 7.1) { // > 6.1) {
                     console.log('canRewind');
                     // video.pause();
                     canRewind = true;
@@ -43,19 +43,22 @@ const Game = () => {
 
                 if (canRewind) {
                     if (rewinding) {
-                        video.currentTime -= 0.01;
-                        if (video.currentTime < 6.5) {
+                        video.currentTime -= 0.1;
+                        if (video.currentTime < 6.9) {
                             rewinding = !rewinding;
                         }
                     } else {
-                        video.currentTime += 0.01;
+                        video.currentTime += 0.1;
                         if (video.currentTime > 7.1) {
                             rewinding = !rewinding;
                         }
                     }
                     console.log(video.currentTime);
+                    if (video.ended) {
+                        console.log('ended');
+                    }
                 }
-            }*/
+            }
 
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
